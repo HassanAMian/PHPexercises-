@@ -1,18 +1,48 @@
-/* PHP Basics Exercises from w3resource.com */
+/* PHP Basics Exercises from w3resource.com. */
 
 1. Write a PHP script to get the PHP version and configuration information.
 
-
+<?php 
+	phpinfo();  
+?> 
 
 2. Write a PHP script to display the following strings. 
 	Sample String : 
 	'Tomorrow I \'ll learn PHP global variables.'
 	'This is a bad command : del c:\\*.*' 
 
+<?php  
+	echo 'Tomorrow I\'ll learn PHP global variables.';   
+	echo 'This is a bad command : del c:\\*.*';   
+?> 
+
 
 3. $var = 'PHP Tutorial'. Put this variable into the title section, h3 tag and as an anchor text within a HTML document.
 
+<?php  
+	$var = 'PHP Tutorial'; 
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php echo $var; ?></title>
+</head>
+<body>
+<h3><a href="http://www.google.com"><?php echo $var; ?></a></h3>
+</body>
+</html>
+
+
 4. Create a simple HTML form and accept the user name and display the name through PHP echo statement.
+
+<form method='POST'>
+<p>Please input your username:</p>  
+ <input type="text" name="name">  
+ <input type="submit" value="submit">  
+ </form>  
+<?php    
+echo htmlspecialchars($_POST["name"]);
+?>
 
 5. Write a PHP script to get the client IP address.
 

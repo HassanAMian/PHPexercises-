@@ -28,7 +28,7 @@
 	<title><?php echo $var; ?></title>
 </head>
 <body>
-<h3><a href="http://www.google.com"><?php echo $var; ?></a></h3>
+	<h3><a href="http://www.google.com"><?php echo $var; ?></a></h3>
 </body>
 </html>
 
@@ -36,12 +36,12 @@
 4. Create a simple HTML form and accept the user name and display the name through PHP echo statement.
 
 <form method='POST'>
-<p>Please input your username:</p>  
- <input type="text" name="name">  
- <input type="submit" value="submit">  
- </form>  
+	<p>Please input your username:</p>  
+	<input type="text" name="name">  
+	<input type="submit" value="submit">  
+</form>  
 <?php    
-echo htmlspecialchars($_POST["name"]);
+	echo htmlspecialchars($_POST["name"]);
 ?>
 
 5. Write a PHP script to get the client IP address.

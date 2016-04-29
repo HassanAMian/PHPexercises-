@@ -46,15 +46,49 @@
 
 5. Write a PHP script to get the client IP address.
 
+<?php 
+	echo $_SERVER['REMOTE_ADDR'];
+?>
+
+NOTE: The solution from w3resource is the conditional statement below, but I've read that there are security issues related to obtaining client IP with this method, so my solution was simply to use $_SERVER['REMOTE_ADDR'] to obtain the IP value.
+
+<?php
+	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    	$ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+    	$ip = $_SERVER['REMOTE_ADDR'];
+	}
+?>
+
 6. Write a simple PHP browser detection script.
+
+<?php  
+	echo $_SERVER ['HTTP_USER_AGENT'];  
+?>  
 
 7. Write a PHP script to get the current file name.
 
-8. Write a PHP script, which will return the following components of the url 'http://www.w3resource.com/php-exercises/php-basic-exercises.php'.
-	List of components : Scheme, Host, Path
+<?php  
+	$file_name = basename($_SERVER['PHP_SELF']);  
+	echo $file_name;  
+?> 
 
+8. Write a PHP script, which will return the Scheme, Host, and Path of a url.
 
+<?php  
+	$url = 'https://www.reddit.com/r/all/';  
+	$url=parse_url($url);
+?>
+<ul>
+	<li> Scheme: <?php echo $url['scheme']; ?></li>  
+	<li> Host: <?php echo $url['host']; ?></li>  
+	<li> Path: <?php echo $url['path']; ?></li>  
+</ul>
+	
 9. Write a PHP script, which change the color of first character of a word.
+
 
 10. Write a PHP script, to check whether the page is called from 'https' or 'http'.
 

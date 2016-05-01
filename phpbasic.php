@@ -89,7 +89,7 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 	
 9. Write a PHP script, which change the color of first character of a word.
 <?php
-	$text = 'The First Color Should Be Blue';
+	$text = 'The First Letter Should Be Blue';
 	$text = preg_replace('/(\b[a-z])/i','<span style="color:blue;">\1</span>',$text);
 	echo $text;
 ?>
@@ -165,10 +165,22 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 
 
 16. Write a PHP script to count lines in a file.
+<?php 
+  $file = "file.php"; 
+  $lines = count(file($file)); 
+  echo "There are $lines lines in $file"; 
+?>
 
 17. Write a PHP script to print current PHP version. Note : Do not use phpinfo() function.  
+<?php  
+	echo phpversion();   
+?>  
 
 18. Write a PHP script to delay the program execution for the given number of seconds.
+<?php  
+	$t = 10;
+	sleep($t); 
+?> 
 
 19. Arithmetic operations on character variables : $d = 'A00'. Using this variable print the following numbers. Go to the editor
 	Sample Output :
@@ -177,6 +189,7 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 	A03
 	A04
 	A05
+	
 
 20. Write a PHP script to get the last occurred error.
 

@@ -1,6 +1,6 @@
 /* PHP Basics Exercises from w3resource.com. */
 /* url: http://www.w3resource.com/php-exercises/php-basic-exercises.php */
-/* Some solutions are different than those listed on w3resource solution pages. If my solution is significantly different, I will include both solutions and explain my reasoning for picking mine over the posted solution. */
+/* Some solutions may be different than those listed on w3resource solution pages. If my solution is significantly different, I will include both solutions and explain my reasoning for picking mine over the posted solution. */
 
 
 1. Write a PHP script to get the PHP version and configuration information.

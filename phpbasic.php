@@ -171,27 +171,43 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
   echo "There are $lines lines in $file"; 
 ?>
 
+
 17. Write a PHP script to print current PHP version. Note : Do not use phpinfo() function.  
 <?php  
 	echo phpversion();   
 ?>  
 
+
 18. Write a PHP script to delay the program execution for the given number of seconds.
 <?php  
 	$t = 10;
+	echo date('h:i:s') . "<br>";
 	sleep($t); 
+	echo date('h:i:s');
 ?> 
 
-19. Arithmetic operations on character variables : $d = 'A00'. Using this variable print the following numbers. Go to the editor
+
+19. Arithmetic operations on character variables : $d = 'A00'. Using this variable print the following numbers. 
 	Sample Output :
 	A01
 	A02
 	A03
 	A04
 	A05
-	
+<?php  
+	$d = 'A00';  
+	for ($n=0; $n<5; $n++) {  
+		echo ++$d .'<br>';  
+	}  
+?> 
+
 
 20. Write a PHP script to get the last occurred error.
+<?php
+	echo $a;
+	print_r(error_get_last());
+?>
+
 
 21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
 

@@ -209,7 +209,7 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 ?>
 
 
-21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
+* 21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
 <?php  
 
 ?>  
@@ -248,16 +248,48 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 ?>  
 
 
-25. Write a PHP script to get the document root directory under which the current script is executing, as defined in the server's configuration file.
+* 25. Write a PHP script to get the document root directory under which the current script is executing, as defined in the server's configuration file.
 
 
 
 26. Write a PHP script to get the information about the operating system PHP is running on.
+<?php
+	echo php_uname();
+	echo PHP_OS;
+
+	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+    	echo 'This is a server using Windows!';
+	} else {
+    	echo 'This is a server not using Windows!';
+	}
+?>
+
 
 27. Write a PHP script to print out all the credits for PHP.
+<?php
+	// some code of your own
+	phpcredits(CREDITS_ALL - CREDITS_FULLPAGE);
+	// some more code
+?>
+
 
 28. Write a PHP script to get the directory path used for temporary files.
+<?php  
+	$temp_file = tempnam(sys_get_temp_dir(), 'Tux');  
+	echo $temp_file;  
+?>  
+
 
 29. Write a PHP script to get the names of the functions of a module. Note : Find XML, JSON functions etc. 
+<?php  
+	print_r(get_extension_funcs("JSON"));  
+	echo '<br>';  
+	print_r(get_extension_funcs("XML"));  
+?>  
+
 
 30. Write a PHP script to get the time of the last modification of the current page.
+<?php  
+	echo date ("F d Y H:i:s.", getlastmod());  
+?> 
+

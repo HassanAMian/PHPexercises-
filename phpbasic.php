@@ -209,10 +209,11 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 ?>
 
 
-* 21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
+21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
 <?php  
-
-?>  
+	$rootdir = getenv('DOCUMENT_ROOT');  
+	echo $rootdir;  
+?>   
 
 
 22. Write a PHP script to get the full URL.

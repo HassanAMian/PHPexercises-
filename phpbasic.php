@@ -210,14 +210,47 @@ NOTE: The solution from w3resource is the conditional statement below, but I've 
 
 
 21. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
+<?php  
+
+?>  
+
 
 22. Write a PHP script to get the full URL.
+<?php 
+	$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
+	echo $url; 
+?>  
+
 
 23. Write a PHP script to compare the PHP version. Note : Use version_compare() function and PHP_VERSION constant.
+<?php
+	if (version_compare(PHP_VERSION, '6.0.0') >= 0) {
+    	echo 'I am at least PHP version 6.0.0, my version: ' . PHP_VERSION . "\n";
+	}
+
+	if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
+    	echo 'I am at least PHP version 5.3.0, my version: ' . PHP_VERSION . "\n";
+	}
+
+	if (version_compare(PHP_VERSION, '5.0.0', '>=')) {
+    	echo 'I am using PHP 5, my version: ' . PHP_VERSION . "\n";
+	}
+
+	if (version_compare(PHP_VERSION, '5.0.0', '<')) {
+    	echo 'I am using PHP 4, my version: ' . PHP_VERSION . "\n";
+	}
+?>
+
 
 24. Write a PHP script to get the name of the owner of the current PHP script.
+<?php  
+	echo get_current_user();  
+?>  
+
 
 25. Write a PHP script to get the document root directory under which the current script is executing, as defined in the server's configuration file.
+
+
 
 26. Write a PHP script to get the information about the operating system PHP is running on.
 

@@ -97,9 +97,37 @@ After inserting '$' the array is :
 8. Write a PHP script to sort the following associative array : 
 array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40") in 
 a) ascending order sort by value
+<?php
+	$people = array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); 
+	asort($people);
+	foreach($people as $name=>$age){  
+		echo $name." is ".$age."<br>";
+	}
+?>
 b) ascending order sort by Key
+<?php
+	$people = array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); 
+	ksort($people);
+	foreach($people as $name=>$age){  
+		echo $name." is ".$age."<br>";
+	}
+?>
 c) descending order sorting by Value
+<?php
+	$people = array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); 
+	arsort($people);
+	foreach($people as $name=>$age){  
+		echo $name." is ".$age."<br>";
+	}
+?>
 d) descending order sorting by Key
+<?php
+	$people = array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); 
+	krsort($people);
+	foreach($people as $name=>$age){  
+		echo $name." is ".$age."<br>";
+	}
+?>
 
 
 9. Write a PHP script to calculate and display average temperature, five lowest and highest temperatures. 

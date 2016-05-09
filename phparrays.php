@@ -11,6 +11,7 @@ and the words 'red', 'green' and 'white' will come from $color.
 	echo "The memory of that scene for me is like a frame of film forever frozen at that moment: the $color[2] carpet, the $color[1] lawn, the $color[0] house, the leaden sky. The new president and his first lady. - Richard M. Nixon";  
 ?>  
 
+
 2. $color = array('white', 'green', 'red'') 
 Write a PHP script which will display the colors in the following way : 
 Output : 
@@ -34,6 +35,7 @@ white
 	echo "</ul>";  
 ?> 
 
+
 3. $ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels", "Denmark"=>"Copenhagen", "Finland"=>"Helsinki", "France" => "Paris", "Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana", "Germany" => "Berlin", "Greece" => "Athens", "Ireland"=>"Dublin", "Netherlands"=>"Amsterdam", "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm", "United Kingdom"=>"London", "Cyprus"=>"Nicosia", "Lithuania"=>"Vilnius", "Czech Republic"=>"Prague", "Estonia"=>"Tallin", "Hungary"=>"Budapest", "Latvia"=>"Riga", "Malta"=>"Valetta", "Austria" => "Vienna", "Poland"=>"Warsaw") ;
 
 Create a PHP script which display the capital and country name from the above array $ceu. Sort the list by the name of the country. 
@@ -44,7 +46,14 @@ The capital of Greece is Athens
 The capital of Germany is Berlin 
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 - - - - - - - - - - - - - - - - - - - - - - - - -
-
+<?php  
+	$ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels", "Denmark"=>"Copenhagen", "Finland"=>"Helsinki", "France" => "Paris", "Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana", "Germany" => "Berlin", "Greece" => "Athens", "Ireland"=>"Dublin", "Netherlands"=>"Amsterdam", "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm", "United Kingdom"=>"London", "Cyprus"=>"Nicosia", "Lithuania"=>"Vilnius", "Czech Republic"=>"Prague", "Estonia"=>"Tallin", "Hungary"=>"Budapest", "Latvia"=>"Riga", "Malta"=>"Valetta", "Austria" => "Vienna", "Poland"=>"Warsaw");
+	asort($ceu);  
+	foreach($ceu as $country => $capital)  
+	{  
+		echo "The capital of $country is $capital <br>";  
+	}  
+?> 
 
 
 4. $x = array(1, 2, 3, 4, 5);
@@ -58,6 +67,10 @@ array(4) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(5) }
 5. $color = array(4 => 'white', 6 => 'green', 11=> 'red');
 Write a PHP script to get the first element of the above array. 
 Expected result : white
+<?php  
+	$color = array(4 => 'white', 6 => 'green', 11=> 'red');  
+	echo $color[4];  
+?> 
 
 
 6. Write a PHP script which decode the following JSON string. 

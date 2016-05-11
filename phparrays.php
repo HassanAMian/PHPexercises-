@@ -61,7 +61,12 @@ Delete an element from the above PHP array. After deleting the element, integer 
 Sample Output : 
 array(5) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(4) [4]=> int(5) } 
 array(4) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(5) }
-
+<?php
+	$i = array(1, 2, 3, 4, 5);  
+	unset($i[1]);
+	$i = array_values($i);
+	print_r($i);   
+?>
 
 
 5. $color = array(4 => 'white', 6 => 'green', 11=> 'red');
@@ -84,7 +89,18 @@ Expected Output :
 Title : The Cuckoos Calling
 Author : Robert Galbraith
 Publisher : Little Brown
-
+<?php  
+	function bookarray($value,$key) {  
+		echo "$key : $value<br>";  
+	}  
+	$x ='{"Title": "The Cuckoos Calling",
+		"Author": "Robert Galbraith",
+		"Detail": {
+		"Publisher": "Little Brown"
+		}}';
+	$t = json_decode($x,true);  
+	array_walk_recursive($t,"bookarray");  
+?>  
 
 7. Write a PHP script that insert a new item in an array on any position. 
 Expected Output :

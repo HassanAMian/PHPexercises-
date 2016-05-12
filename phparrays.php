@@ -63,7 +63,7 @@ array(5) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(4) [4]=> int(5) }
 array(4) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(5) }
 <?php
 	$i = array(1, 2, 3, 4, 5);  
-	unset($i[1]);
+	unset($i[3]);
 	$i = array_values($i);
 	print_r($i);   
 ?>
@@ -102,12 +102,25 @@ Publisher : Little Brown
 	array_walk_recursive($t,"bookarray");  
 ?>  
 
+
 7. Write a PHP script that insert a new item in an array on any position. 
 Expected Output :
 Original array : 
 1 2 3 4 5 
 After inserting '$' the array is :
 1 2 3 $ 4 5
+<?php  
+	$a = array('1','2','3','4','5');  
+	foreach ($a as $x) {
+		echo "$x ";
+	}  
+	echo "<br>";
+	$y = '$';  
+	array_splice($a,3,0,$y);    
+	foreach ($a as $x) {
+		echo "$x ";
+	}  
+?>  
 
 
 8. Write a PHP script to sort the following associative array : 

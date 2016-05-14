@@ -3,7 +3,15 @@
 /* Some solutions may be different than those listed on w3resource solution pages. If my solution is significantly different, I will include both solutions and explain my reasoning for picking mine over the posted solution. */
 
 1. Write a function to calculate the factorial of a number (non-negative integer). The function accepts the number as a argument. 
-
+<?php  
+  function factorial($n) {  
+    if($n ==0) {  
+       return 1;  
+    } else {     
+       return $n * factorial($n-1);  
+    }  
+  }   
+?>  
 
 2. Write a function to check a number is prime or not. 
 <?php

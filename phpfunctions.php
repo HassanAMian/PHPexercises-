@@ -13,6 +13,7 @@
   }   
 ?>  
 
+
 2. Write a function to check a number is prime or not. 
 <?php
 	function Prime($num) {
@@ -34,8 +35,7 @@
 
 3. Write a function to reverse a string. 
 <?php  
-function reverse($str1)  
-{  
+function reverse($str1) {  
  $n = strlen($str1);  
  if($n == 1)  
    {  
@@ -52,6 +52,22 @@ print_r(reverse('hello world!'));
 
 
 4. Write a function to sort an array. 
+<?php  
+  function sortarray($a) {  
+    for($x=0;$x< count($a);++$x) {  
+    $min = $x;  
+      for($y=$x+1;$y< count($a);++$y)  
+      {  
+        if($a[$y] < $a[$min]) {  
+        $temp = $a[$min];  
+        $a[$min] = $a[$y];  
+        $a[$y] = $temp;  
+        }  
+      }  
+    }  
+  return $a;  
+  }  
+?> 
 
 
 5. Write a PHP function that checks if a string is all lower case. 

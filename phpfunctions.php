@@ -66,7 +66,7 @@ print_r(reverse('hello world!'));
       }  
     }  
   return $a;  
-  }  
+  }   
 ?> 
 
 
